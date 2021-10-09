@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A6854702711DB2500449872 /* Box.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A68546F2711DB2500449872 /* Box.swift */; };
+		3A6854722711DE1500449872 /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6854712711DE1500449872 /* ChallengeViewModel.swift */; };
 		BA0CF8B126321D30007BDFC8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CF89A26321BAE007BDFC8 /* Alamofire.framework */; };
 		BA0CF8B226321D30007BDFC8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CF89A26321BAE007BDFC8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA0CF8B92632F566007BDFC8 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CF8B72632F566007BDFC8 /* UserTableViewCell.swift */; };
@@ -118,6 +120,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A68546F2711DB2500449872 /* Box.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Box.swift; sourceTree = "<group>"; };
+		3A6854712711DE1500449872 /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
 		BA0CF88F26321BAE007BDFC8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		BA0CF8B72632F566007BDFC8 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		BA0CF8B82632F566007BDFC8 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
@@ -179,6 +183,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A68546A2711D69300449872 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA0CF8D126334FDB007BDFC8 /* PostTableViewController.swift */,
+				BA0CF8D526334FF0007BDFC8 /* CommentTableViewController.swift */,
+				BA0CF8EA26336B40007BDFC8 /* AlbumTableViewController.swift */,
+				BA0CF8F926336FEB007BDFC8 /* PhotoTableViewController.swift */,
+				BA0CF9012633764E007BDFC8 /* DetailsViewController.swift */,
+				BA93F7EF2632035800CE8AFF /* ChallengeViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		3A68546C2711D6FF00449872 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		3A68546D2711D71300449872 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				3A6854712711DE1500449872 /* ChallengeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3A68546E2711D72900449872 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				3A68546F2711DB2500449872 /* Box.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		BA0CF86C26321AE6007BDFC8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,17 +264,15 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		BA0CF8C626334817007BDFC8 /* View Controllers */ = {
+		BA0CF8C626334817007BDFC8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				BA93F7EF2632035800CE8AFF /* ChallengeViewController.swift */,
-				BA0CF8D126334FDB007BDFC8 /* PostTableViewController.swift */,
-				BA0CF8D526334FF0007BDFC8 /* CommentTableViewController.swift */,
-				BA0CF8EA26336B40007BDFC8 /* AlbumTableViewController.swift */,
-				BA0CF8F926336FEB007BDFC8 /* PhotoTableViewController.swift */,
-				BA0CF9012633764E007BDFC8 /* DetailsViewController.swift */,
+				BA0CF8B62632F552007BDFC8 /* Cells */,
+				3A68546A2711D69300449872 /* Controllers */,
+				BA93F7F12632035800CE8AFF /* Main.storyboard */,
+				BA93F7F62632035A00CE8AFF /* LaunchScreen.storyboard */,
 			);
-			path = "View Controllers";
+			path = Views;
 			sourceTree = "<group>";
 		};
 		BA0CF8C926334B6D007BDFC8 /* User */ = {
@@ -297,14 +335,14 @@
 		BA93F7EA2632035800CE8AFF /* InterChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				BA0CF8C626334817007BDFC8 /* View Controllers */,
+				3A68546E2711D72900449872 /* Utils */,
+				3A68546D2711D71300449872 /* ViewModels */,
+				3A68546C2711D6FF00449872 /* Services */,
+				BA0CF8C626334817007BDFC8 /* Views */,
 				BA0CF8BF2632F7CD007BDFC8 /* Models */,
-				BA0CF8B62632F552007BDFC8 /* Cells */,
 				BA93F7EB2632035800CE8AFF /* AppDelegate.swift */,
 				BA93F7ED2632035800CE8AFF /* SceneDelegate.swift */,
-				BA93F7F12632035800CE8AFF /* Main.storyboard */,
 				BA93F7F42632035A00CE8AFF /* Assets.xcassets */,
-				BA93F7F62632035A00CE8AFF /* LaunchScreen.storyboard */,
 				BA93F7F92632035A00CE8AFF /* Info.plist */,
 			);
 			path = InterChallenge;
@@ -523,6 +561,7 @@
 			files = (
 				BA0CF8FE26337023007BDFC8 /* Photo.swift in Sources */,
 				BA0CF8F526336DB5007BDFC8 /* PhotoTableViewCell.swift in Sources */,
+				3A6854722711DE1500449872 /* ChallengeViewModel.swift in Sources */,
 				BA0CF8EF26336B59007BDFC8 /* Album.swift in Sources */,
 				BA0CF8C12632F7E3007BDFC8 /* User.swift in Sources */,
 				BA0CF8EB26336B40007BDFC8 /* AlbumTableViewController.swift in Sources */,
@@ -530,6 +569,7 @@
 				BA0CF8D626334FF0007BDFC8 /* CommentTableViewController.swift in Sources */,
 				BA0CF8E426336A9A007BDFC8 /* AlbumTableViewCell.swift in Sources */,
 				BA0CF8FA26336FEB007BDFC8 /* PhotoTableViewController.swift in Sources */,
+				3A6854702711DB2500449872 /* Box.swift in Sources */,
 				BA0CF9022633764E007BDFC8 /* DetailsViewController.swift in Sources */,
 				BA93F7F02632035800CE8AFF /* ChallengeViewController.swift in Sources */,
 				BA93F7EC2632035800CE8AFF /* AppDelegate.swift in Sources */,
