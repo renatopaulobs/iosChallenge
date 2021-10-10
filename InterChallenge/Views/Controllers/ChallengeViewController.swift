@@ -7,30 +7,26 @@ class ChallengeViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCell")
         fillUsers()
     }
     
     private func fillUsers() {
-        AF.request("https://jsonplaceholder.typicode.com/users").validate().responseJSON { response in
-            guard response.error == nil else {
+        
+        JsonPlaceholderService.getUsers() {response in
+            if (response != nil){
+                self.users = response!
+            }
+            else {
                 let alert = UIAlertController(title: "Erro", message: "Algo errado aconteceu. Tente novamente mais tarde.", preferredStyle: .alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
-                    alert.dismiss(animated: true)
-                }))
+                alert.dismiss(animated: true)
+                    }))
                 self.present(alert, animated: true)
-                return
             }
             
-            do {
-                if let data = response.data {
-                    let models = try JSONDecoder().decode([User].self, from: data)
-                    self.users = models
-                    self.tableView.reloadData()
-                }
-            } catch {
-                print("Error during JSON serialization: \(error.localizedDescription)")
-            }
+            self.tableView.reloadData()
         }
     }
     
