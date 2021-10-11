@@ -8,7 +8,4 @@ O aplicativo funcionando exatamente como está na versão original. O comportame
 
 # O que foi feito
 
-Aplicação do padrão MVVM
-Utilização de Services para as chamadas de API
-Arquivo de contants para os valores usados
-Aplicação de Binding utilizando Boxing
+Aplicação do padrão MVVM; Utilização de Services para as chamadas de API; Arquivo de contants para os valores usados; Aplicação de Binding utilizando Boxing
