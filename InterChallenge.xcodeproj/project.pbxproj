@@ -11,6 +11,10 @@
 		3A6854722711DE1500449872 /* ChallengeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6854712711DE1500449872 /* ChallengeViewModel.swift */; };
 		3A6854742711EA9C00449872 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6854732711EA9C00449872 /* Constants.swift */; };
 		3A6854762711F81700449872 /* JsonPlaceholderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6854752711F81700449872 /* JsonPlaceholderService.swift */; };
+		3A685478271477D500449872 /* PhotoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A685477271477D400449872 /* PhotoViewModel.swift */; };
+		3A68547A271477EE00449872 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A685479271477EE00449872 /* AlbumViewModel.swift */; };
+		3A68547C271477FE00449872 /* CommentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A68547B271477FE00449872 /* CommentViewModel.swift */; };
+		3A68547E2714781400449872 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A68547D2714781400449872 /* PostViewModel.swift */; };
 		BA0CF8B126321D30007BDFC8 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CF89A26321BAE007BDFC8 /* Alamofire.framework */; };
 		BA0CF8B226321D30007BDFC8 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BA0CF89A26321BAE007BDFC8 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BA0CF8B92632F566007BDFC8 /* UserTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0CF8B72632F566007BDFC8 /* UserTableViewCell.swift */; };
@@ -126,6 +130,10 @@
 		3A6854712711DE1500449872 /* ChallengeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeViewModel.swift; sourceTree = "<group>"; };
 		3A6854732711EA9C00449872 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		3A6854752711F81700449872 /* JsonPlaceholderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonPlaceholderService.swift; sourceTree = "<group>"; };
+		3A685477271477D400449872 /* PhotoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewModel.swift; sourceTree = "<group>"; };
+		3A685479271477EE00449872 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		3A68547B271477FE00449872 /* CommentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewModel.swift; sourceTree = "<group>"; };
+		3A68547D2714781400449872 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		BA0CF88F26321BAE007BDFC8 /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = Alamofire/Alamofire.xcodeproj; sourceTree = "<group>"; };
 		BA0CF8B72632F566007BDFC8 /* UserTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTableViewCell.swift; sourceTree = "<group>"; };
 		BA0CF8B82632F566007BDFC8 /* UserTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTableViewCell.xib; sourceTree = "<group>"; };
@@ -212,6 +220,10 @@
 			isa = PBXGroup;
 			children = (
 				3A6854712711DE1500449872 /* ChallengeViewModel.swift */,
+				3A685477271477D400449872 /* PhotoViewModel.swift */,
+				3A685479271477EE00449872 /* AlbumViewModel.swift */,
+				3A68547B271477FE00449872 /* CommentViewModel.swift */,
+				3A68547D2714781400449872 /* PostViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -565,9 +577,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A68547E2714781400449872 /* PostViewModel.swift in Sources */,
+				3A68547C271477FE00449872 /* CommentViewModel.swift in Sources */,
 				BA0CF8FE26337023007BDFC8 /* Photo.swift in Sources */,
+				3A685478271477D500449872 /* PhotoViewModel.swift in Sources */,
 				BA0CF8F526336DB5007BDFC8 /* PhotoTableViewCell.swift in Sources */,
 				3A6854722711DE1500449872 /* ChallengeViewModel.swift in Sources */,
+				3A68547A271477EE00449872 /* AlbumViewModel.swift in Sources */,
 				BA0CF8EF26336B59007BDFC8 /* Album.swift in Sources */,
 				BA0CF8C12632F7E3007BDFC8 /* User.swift in Sources */,
 				BA0CF8EB26336B40007BDFC8 /* AlbumTableViewController.swift in Sources */,

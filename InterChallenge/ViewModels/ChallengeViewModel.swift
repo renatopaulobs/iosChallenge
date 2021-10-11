@@ -6,5 +6,22 @@
 //
 
 import Foundation
-
-
+import UIKit
+public class ChallengeViewModel {
+    var users = Box([User]())
+    var usersCount = Box(0)
+    
+    init() {
+        fetchUsers()
+    }
+    
+    private func fetchUsers() {
+        JsonPlaceholderService.getUsers() {response in
+            if (response != nil){
+                let data = response!
+                self.users.value = data
+                self.usersCount.value = data.count
+            }
+        }
+    }
+}

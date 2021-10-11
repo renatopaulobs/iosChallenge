@@ -1,54 +1,42 @@
-import Alamofire
 import UIKit
 
 class ChallengeViewController: UITableViewController {
     
-    var users = [User]()
+    var usersCount = 0
+    private let viewModel = ChallengeViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         tableView.register(UINib(nibName: "UserTableViewCell", bundle: nil), forCellReuseIdentifier: "UserCell")
-        fillUsers()
-    }
-    
-    private func fillUsers() {
-        
-        JsonPlaceholderService.getUsers() {response in
-            if (response != nil){
-                self.users = response!
-            }
-            else {
-                let alert = UIAlertController(title: "Erro", message: "Algo errado aconteceu. Tente novamente mais tarde.", preferredStyle: .alert)
-                alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { _ in
-                alert.dismiss(animated: true)
-                    }))
-                self.present(alert, animated: true)
-            }
-            
-            self.tableView.reloadData()
+        viewModel.usersCount.bind{ [weak self] usersResponse in
+            self?.usersCount = usersResponse
+            self?.tableView.reloadData()
         }
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return users.count
+        return usersCount
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "UserCell", for: indexPath) as? UserTableViewCell else {
             return UITableViewCell()
         }
-        let user = users[indexPath.row]
-        cell.selectionStyle = .none
-        cell.id = user.id
-        cell.initialsLabel.text = String(user.name.prefix(2))
-        cell.nameLabel.text = user.name
-        cell.userNameLabel.text = user.username
-        cell.emailLabel.text = user.email
-        cell.phoneLabel.text = user.phone
-        cell.delegate = self
-        cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? .white : UIColor(white: 0.667, alpha: 0.2)
+        viewModel.users.bind{ [weak self] usersResponse in
+            let user = usersResponse[indexPath.row]
+            cell.selectionStyle = .none
+            cell.id = user.id
+            cell.initialsLabel.text = String(user.name.prefix(2))
+            cell.nameLabel.text = user.name
+            cell.userNameLabel.text = user.username
+            cell.emailLabel.text = user.email
+            cell.phoneLabel.text = user.phone
+            cell.delegate = self
+            cell.contentView.backgroundColor = indexPath.row % 2 == 0 ? .white : UIColor(white: 0.667, alpha: 0.2)
+        }
         return cell
+        
     }
     
     // MARK: - Navigation
