@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import UIKit
+
 public class ChallengeViewModel {
     var users = Box([User]())
     var usersCount = Box(0)
