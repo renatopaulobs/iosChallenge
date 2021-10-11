@@ -6,5 +6,9 @@ Realizar uma refatoração que melhore as técnicas de programação e arquitetu
 
 O aplicativo funcionando exatamente como está na versão original. O comportamento e o visual não devem ser alterados.
 
-Publique o resultado da sua refatoração em um repositório público aqui mesmo no GitHub e nos envie o link.
+# O que foi feito
 
+Aplicação do padrão MVVM
+Utilização de Services para as chamadas de API
+Arquivo de contants para os valores usados
+Aplicação de Binding utilizando Boxing
